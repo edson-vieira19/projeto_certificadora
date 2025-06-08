@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulamento</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/sobre.css" />
+    <link rel="stylesheet" href="./css/aula.css">
+</head>
+<body>
+    <header>
+        <header>
+        <nav>
+            <img class="logo" src="assets/logo2.png" alt="" height="80px">
+            <a class="titulo" href="/">POO Descomplicada</a>
+            <a onclick="window.close()">Fechar</a>
+        </nav>
+    </header>
+    <main class="aulas-section">
+        <div class="container">
+            <h1>Encapsulamento</h1>
+            <section class="texto-aula">
+                <p><strong>Encapsulamento</strong>é um dos pilares da POO que consiste em esconder o estado interno de
+                    um objeto e restringir o acesso direto aos seus atributos. Isso é feito utilizando os <strong>modificadores de
+                        acesso</strong>.
+                    </p>
+                <p>Os modificadores de acesso definem a visibilidade de atributos e métodos:
+                    <ul>
+                        <li>public: Acesso de qualquer lugar.</li>
+                        <li>private: Acesso apenas dentro da própria classe.</li>
+                        <li>protected: Acesso dentro da própria classe, subclasses e classes no mesmo pacote
+                    (diretório).</li>
+                    </ul>
+                    </p>
+                <p>Para acessar atributos private, utilizamos métodos <strong>getters</strong> (para obter o valor) e
+                    <strong>setters</strong> (para modificar o valor). Isso permite controlar como os dados são acessados e
+                    modificados, adicionando lógica de validação, se necessário.
+                </p>
+                <h2>Vantagens do Encapsulamento:</h2>
+                <br>
+                <p><strong>Segurança:</strong> Protege os dados do objeto de modificações indevidas.</p>
+                <p><strong>Manutenção: Facilita a alteração interna da classe sem afetar o código que a utiliza</strong></p>
+                <p><strong>Flexibilidade:</strong> Permite controlar o acesso e a modificação dos dados de forma precisa.</p>
+                <br>
+                <h2>Exemplo de Código:</h2>
+                <pre>
+                    <code>
+                        class ContaBancaria {
+
+                        private int numeroConta;
+                        private String titular;
+                        private double saldo;
+                        
+                        // Construtor
+                        public ContaBancaria(int numeroConta, String titular, double saldo) {
+                        this.numeroConta = numeroConta;
+                        this.titular = titular;
+                        this.saldo = saldo;
+                        } 
+                        
+                        // Getters
+                        public int getNumeroConta() {
+                        return numeroConta;
+                        } 
+                        public String getTitular() {
+                        return titular;
+                        }
+                         public double getSaldo() {
+                        return saldo;
+                        }
+
+                        // Setter (com validação)
+                        public void setSaldo(double novoSaldo) {
+                        if (novoSaldo >= 0) {
+                        saldo = novoSaldo;
+                        } else {
+                        System.out.println("Saldo inválido.");
+                            }
+                        }
+                        
+                        public void depositar(double valor) {
+                        saldo += valor;
+
+                        System.out.println("Depósito de " + valor + " realizado. Novo saldo: " + saldo);
+                        }
+
+                        public void sacar(double valor) {
+                        if (valor <= saldo) {
+                             saldo -=valor;
+                             System.out.println("Saque de " + valor + " realizado. Novo saldo: " + saldo);
+                        } else {
+                        System.out.println(" Saldo insuficiente.");
+                             } 
+                        } 
+                    }
+                    
+                    public class ExemploEncapsulamento { 
+                        
+                        public static void main(String[] args) {
+                            
+                            ContaBancaria conta=new ContaBancaria(111222, "Carlos Drummond" , 2000.0);
+
+                            System.out.println("Titular: " + conta.getTitular()); // Saída: Titular: Carlos Drummond
+
+                        conta.setSaldo(-100.0); // Saída: Saldo inválido.
+
+                        conta.setSaldo(2500.0);
+
+                        System.out.println(" Saldo: " + conta.getSaldo()); // Saída: Saldo: 2500.0
+                        }
+                    }
+                    </code>
+                </pre>
+                <h2>Exercicios: </h2>
+                <ol>
+                    <li>
+                    Modifique a classe Carro para encapsular os atributos modelo, cor e ano. Forneça
+                    getters e setters para esses atributos.</li>
+                    <br>
+                    <li>
+                    Na classe Carro, adicione uma validação no setter de ano para garantir que o ano seja
+                    maior que 1900.</li>
+                </ol>
+            </section>
+            <section class="video-aula">
+                <h2>Vídeo da Aula</h2>
+                <iframe src="https://www.youtube.com/embed/hr9B25SMZtk" title="Aula de Encapsulamento" frameborder="0" allowfullscreen></iframe>
+            </section>
+        </div>    
+    </main>
+    </header>
+    <footer>
+        <p>Copyright © 2025 Todos os direitos reservados.</p>
+    </footer>
+    
+</body>
+</html>

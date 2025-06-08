@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herança</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/sobre.css" />
+    <link rel="stylesheet" href="./css/aula.css" />
+</head>
+<body>
+    <header>
+        <header>
+        <nav>
+            <img class="logo" src="assets/logo2.png" alt="" height="80px">
+            <a class="titulo" href="/">POO Descomplicada</a>
+            <a onclick="window.close()">Fechar</a>
+        </nav>
+    </header>
+    <main class="aulas-section">
+        <div class="container">
+            <h1>Herança</h1>
+            <section class="texto-aula">
+                <p><strong>Herança</strong> é um poderoso mecanismo da POO que permite criar novas classes (subclasses
+                ou classes filhas) a partir de classes existentes (superclasses ou classes pais). Isso promove
+                a reutilização de código e a organização hierárquica das classes.</p>
+                <p>A herança estabelece uma relação 'é-um' (is-a) entre as classes. Por exemplo, um 'Cachorro'
+                    é um 'Animal'. A subclasse herda os atributos e métodos da superclasse, podendo adicionar
+                    novos ou modificar os existentes.</p>
+                <p>A palavra-chave extends é utilizada em Java para indicar a herança: class Subclasse extends
+                Superclasse</p>
+                <p><strong>Sobrescrita de métodos (Method Overriding):</strong>
+                    Uma subclasse pode fornecer uma
+                    implementação diferente para um método herdado da superclasse. Isso permite que a
+                    subclasse personalize o comportamento do método.
+                </p>
+                <p>A palavra-chave super é usada na subclasse para acessar membros (atributos e métodos)
+                    da superclasse.</p>
+                <p>Java suporta herança simples, o que significa que uma classe pode herdar diretamente de
+                    apenas uma superclasse. No entanto, é possível criar hierarquias de herança com múltiplos
+                    níveis.</p>
+                <h2>Exemplos de código:</h2>
+                <pre>
+                    <code>
+                        // Superclasse Animal
+                        class Animal {
+
+                        String nome;
+
+                        public Animal(String nome) {
+                        this.nome = nome;
+                        }
+                
+                        void fazerBarulho() {
+                        System.out.println("Animal faz um barulho genérico.");
+                            }
+                        }
+
+                        // Subclasse Cachorro
+                        class Cachorro extends Animal {
+                        String raca;
+                        public Cachorro(String nome, String raca) {
+                        super(nome); // Chama o construtor da superclasse
+                        this.raca = raca;
+                        }
+                        
+                        // Sobrescrita do método fazerBarulho()
+                        @Override
+                        void fazerBarulho() {
+                        System.out.println("Cachorro late: Au au!");
+                        }
+
+                        void abanarRabo() {
+                            System.out.println("Cachorro abana o rabo.");
+                         }
+                        } 
+
+                        // Subclasse Gato
+                        class Gato extends Animal {
+                        public Gato(String nome) {
+                        super(nome);
+                        } 
+                        @Override
+                        void fazerBarulho() {
+                        System.out.println("Gato mia: Miau!");
+                            }
+                        } 
+
+                        public class ExemploHeranca {
+
+                        public static void main(String[] args) {
+
+                        Cachorro rex = new Cachorro("Rex", "Pastor Alemão");
+                        Gato felix = new Gato("Felix");
+
+                        rex.fazerBarulho(); // Saída: Cachorro late: Au au! (método sobrescrito)
+
+                        felix.fazerBarulho(); // Saída: Gato mia: Miau! (método sobrescrito)
+
+                        rex.abanarRabo();
+
+                        System.out.println("Nome do cachorro: " + rex.nome); // Acesso ao atributo da superclasse
+                        
+                            }
+                        }
+                    </code>
+                </pre>    
+                <h2>Exercícios:</h2>  
+                <ol>
+                    <li>
+                        Crie uma hierarquia de classes para representar formas geométricas: Forma
+                        (superclasse), Circulo e Retangulo (subclasses). A superclasse Forma deve ter um
+                        método abstrato calcularArea().
+                    </li>
+                    <br>
+                    <li>
+                        Adicione um método exibirCor() à superclasse Forma e faça com que as subclasses
+                        Circulo e Retangulo o sobrescrevam para exibir a cor específica de cada forma.
+                    </li>
+                </ol>
+            </section>
+            <section class="video-aula">
+                <h2>Video da Aula</h2>
+                <iframe src="https://www.youtube.com/embed/5wGRUndFqAY" title="Aula de Herança" frameborder="0" allowfullscreen></iframe>
+            </section>
+        </div>
+    </main>
+    </header>
+    <footer>
+        <p>Copyright © 2025 Todos os direitos reservados.</p>
+    </footer>
+    
+</body>
+</html>

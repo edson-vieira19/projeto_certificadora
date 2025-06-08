@@ -1,0 +1,33 @@
+nav {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.sobre {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding: 20px 10px 0px 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.sobre-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sobre h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.logo-utfpr img{
+    margin: 0;
+    padding-top: 20px;
+}

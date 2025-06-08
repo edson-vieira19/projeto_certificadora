@@ -1,0 +1,77 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.texto-aula {
+
+    width: 100%;
+    max-width: 100%;
+    padding: 30px 20px;
+    overflow-x: hidden;
+
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.texto-aula h2 {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.texto-aula p {
+    margin-bottom: 16px;
+}
+
+.texto-aula pre {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+.texto-aula code {
+    font-family: Consolas, monospace;
+    color: #333;
+}
+
+.texto-aula ol {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.video-aula {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.video-aula iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    aspect-ratio: 16 / 9;
+}
+
+@media screen and (max-width: 768px) {
+
+  .texto-aula {
+    padding: 20px 15px;
+    font-size: 1rem;
+  }
+
+  .video-aula iframe {
+    height: auto;
+  }
+}

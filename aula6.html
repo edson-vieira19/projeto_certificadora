@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polimorfismo</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/sobre.css" />
+    <link rel="stylesheet" href="./css/aula.css">
+</head>
+<body>
+    <header>
+        <header>
+        <nav>
+            <img class="logo" src="assets/logo2.png" alt="" height="80px">
+            <a class="titulo" href="/">POO Descomplicada</a>
+            <a onclick="window.close()">Fechar</a>
+        </nav>
+    </header>
+    <main class="aulas-section">
+        <div class="container">
+            <h1>Polimorfismo</h1>
+            <section class="texto-aula">
+                <p><strong>Polimorfismo</strong> (do grego, 'muitas formas') é a capacidade de um objeto assumir diferentes
+                    formas ou tipos. Em POO, isso significa que um objeto pode ser referenciado por uma
+                    variável de um tipo mais genérico (superclasse) e se comportar de acordo com seu tipo
+                    específico (subclasse).</p>
+                <p>O polimorfismo permite escrever código mais flexível e genérico, pois podemos tratar
+                        objetos de diferentes classes de forma uniforme</p>
+                <p>Em Java, o polimorfismo é alcançado através de herança e interfaces.</p>
+                <h2>Exemplos de Código</h2>
+                <pre>
+                    <code>
+                        // (Classes Animal, Cachorro e Gato definidas no exemplo de Herança)
+                        public class ExemploPolimorfismo {
+                        public static void main(String[] args) {
+
+                        Animal animal1 = new Cachorro("Rex", "Pastor Alemão"); // Polimorfismo: Referência de superclasse
+
+                        Animal animal2 = new Gato("Felix"); // Polimorfismo: Referência de superclasse
+
+                        animal1.fazerBarulho(); // Saída: Cachorro late: Au au! (Comportamento de Cachorro)
+
+                        animal2.fazerBarulho(); // Saída: Gato mia: Miau! (Comportamento de Gato)
+
+                        // Array de animais (polimorfismo em ação)
+
+                        Animal[] animais = new Animal[2];
+
+                        animais[0] = rex;
+                        animais[1] = felix;
+
+                        for (Animal animal : animais) {
+                        animal.fazerBarulho(); // Chamada polimórfica: cada animal faz seu próprio
+                        barulho
+                                }
+                            }
+                        }
+                    </code>
+                </pre>
+                <h2>Exercícios:</h2>
+                <ol>
+                    <li>
+                        Crie uma interface Imprimivel com um método imprimir(). Faça as classes Circulo e
+                        Retangulo implementarem essa interface. Crie um array de Imprimivel e chame o
+                        método imprimir() para cada objeto.
+                    </li>
+                    <li>
+                        Explique como o polimorfismo facilita a extensibilidade de um sistema. Dê um exemplo.
+                    </li>
+                </ol>
+            </section>
+            <section class="video-aula">
+                <h2>Video da Aula</h2>
+                <iframe src="https://www.youtube.com/embed/NH2qFIVGHu4" title="Aula de Polimorfismo" frameborder="0" allowfullscreen></iframe>
+            </section>
+        </div>
+    </main>
+    </header>
+    <footer>
+        <p>Copyright © 2025 Todos os direitos reservados.</p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos e Metodos</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/sobre.css" />
+    <link rel="stylesheet" href="./css/aula.css">
+</head>
+<body>
+    <header>
+        <header>
+        <nav>
+            <img class="logo" src="assets/logo2.png" alt="" height="80px">
+            <a class="titulo" href="/">POO Descomplicada</a>
+            <a onclick="window.close()">Fechar</a>
+        </nav>
+    </header>
+    <main class="aulas-section">
+        <div class="container">
+            <h1>Atributos e Métodos</h1>
+            <section class="texto-aula">
+                <p><strong>Atributos</strong> são as características ou propriedades de um objeto. Eles representam o estado
+                    do objeto. No exemplo da classe Carro, modelo, cor e ano são atributos. São como as
+                    variáveis que armazenam os dados de um objeto.</p>
+                <p><strong>Métodos</strong> são as ações ou operações que um objeto pode realizar. Eles definem o
+                    comportamento do objeto. No exemplo da classe Carro, exibirInformacoes() é um método.
+                    São como as funções que um objeto pode executar.</p>
+                <p>A palavra-chave this é usada dentro de um método para referenciar o próprio objeto. Ela
+                permite acessar os atributos do objeto dentro do método.</p>
+                <h2>Exemplo de código</h2>
+                <pre>
+                    <code>
+                        class Carro {
+
+                        String modelo;
+                        String cor;
+                        int ano;
+
+                        // Método construtor (inicializa os atributos do objeto)
+                        Carro(String modelo, String cor, int ano) {
+                        this.modelo = modelo;
+                        this.cor = cor;
+                        this.ano = ano;
+                        } 
+
+                        // Método para acelerar o carro
+                        void acelerar() {
+                        System.out.println("O carro " + modelo + " está acelerando!");
+                        } 
+                        
+                        // Método para obter a cor do carro
+                        String obterCor() {
+                        return cor;
+                            }
+                        }
+
+                        public class ExemploAtributosMetodos {
+
+                        public static void main(String[] args) {
+
+                        Carro meuCarro = new Carro("Sedan", "Prata", 2022);
+
+                        meuCarro.acelerar();
+                        
+                        // Saída: O carro Sedan está acelerando!
+                        
+                        System.out.println("Cor do carro: " + meuCarro.obterCor());
+
+                        // Saída: Cor do carro: Prata
+
+                            }
+                        }
+                    </code>
+                </pre>
+                <h2>Exercicios:</h2>
+                <ol>
+                    <li>Adicione os métodos depositar(double valor) e sacar(double valor) à classe
+                        ContaBancaria.</li>
+                        <li>Crie um objeto conta da classe ContaBancaria, deposite 500 e saque 200. Exiba o saldo
+                            final.</li>
+                </ol> 
+            </section>
+            <section class="video-aula">
+                <h2>Vídeo da Aula</h2>
+                <iframe src="https://www.youtube.com/embed/-xMY-satyVU" title="Aula de Atributos e Metodos" frameborder="0" allowfullscreen></iframe>
+            </section>
+        </div>
+    </main>
+    </header>
+    <footer>
+        <p>Copyright © 2025 Todos os direitos reservados.</p>
+    </footer>
+    
+</body>
+</html>

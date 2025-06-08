@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes e Objetos</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/sobre.css" />
+    <link rel="stylesheet" href="./css/aula.css" />
+</head>
+<body>
+    <header>
+        <header>
+        <nav>
+            <img class="logo" src="assets/logo2.png" alt="" height="80px">
+            <a class="titulo" href="/">POO Descomplicada</a>
+            <a onclick="window.close()">Fechar</a>
+        </nav>
+    </header>
+    <main class="aulas-section">
+        <div class="container">
+        <h1>Classes e Objetos</h1>
+
+        <section class="texto-aula">
+            <p>Em POO, tudo gira em torno de objetos e classes. Uma classe é como um modelo ou um molde que define a estrutura e o comportamento de um tipo específico de objeto.</p>
+
+            <p>Pense em uma classe como a planta de uma casa: ela especifica os cômodos, o layout e as características gerais.</p>
+
+            <p>Um objeto, por outro lado, é uma instância específica de uma classe. É uma casa construída a partir da planta. Assim como podemos construir várias casas a partir da mesma planta, podemos criar múltiplos objetos a partir da mesma classe.</p>
+
+            <h2>Exemplo do mundo real</h2>
+            <p><strong>Classe:</strong> Carro</p>
+            <p><strong>Objetos:</strong> Carro A (um Sedan vermelho), Carro B (um SUV azul), Carro C (um Hatch preto)</p>
+            <p>Cada objeto tem seu próprio estado (atributos) e comportamento (métodos), mas todos compartilham as características definidas pela sua classe.</p>
+
+            <h2>Exemplo de código</h2>
+            <pre><code>// Definição da classe Carro
+class Carro {
+    String modelo;
+    String cor;
+    int ano;
+
+    // Método para exibir informações do carro
+    void exibirInformacoes() {
+        System.out.println("Modelo: " + modelo + ", Cor: " + cor + ", Ano: " + ano);
+    }
+}
+
+public class ExemploObjetosClasses {
+    public static void main(String[] args) {
+        // Criação de objetos da classe Carro
+        Carro carro1 = new Carro();
+        carro1.modelo = "Sedan";
+        carro1.cor = "Vermelho";
+        carro1.ano = 2023;
+
+        Carro carro2 = new Carro();
+        carro2.modelo = "SUV";
+        carro2.cor = "Azul";
+        carro2.ano = 2024;
+
+        // Chamada do método para exibir informações
+        carro1.exibirInformacoes(); // Saída: Modelo: Sedan, Cor: Vermelho, Ano: 2023
+        carro2.exibirInformacoes(); // Saída: Modelo: SUV, Cor: Azul, Ano: 2024
+    }
+}
+</code></pre>
+
+            <h2>Exercícios</h2>
+            <ol>
+                <li>Modele a classe <code>ContaBancaria</code> com os atributos: <code>numeroConta</code> (int), <code>titular</code> (String) e <code>saldo</code> (double).</li>
+                <li>Crie dois objetos da classe <code>ContaBancaria</code> e atribua valores aos seus atributos.</li>
+            </ol>
+        </section>
+
+        <section class="video-aula">
+            <h2>Vídeo da Aula</h2>
+            <iframe src="https://www.youtube.com/embed/EuGrwMmaXY0" title="Aula de Objetos e Classes" frameborder="0" allowfullscreen></iframe>
+        </section>
+    </div>
+       
+    </main>
+    </header>
+    <footer>
+        <p>Copyright © 2025 Todos os direitos reservados.</p>
+    </footer>
+    
+</body>
+</html>
