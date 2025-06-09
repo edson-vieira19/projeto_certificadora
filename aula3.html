@@ -32,46 +32,42 @@
                 <h2>Exemplo de código</h2>
                 <pre>
                     <code>
-                        class Carro {
+    class Carro {
 
-                        String modelo;
-                        String cor;
-                        int ano;
+            String modelo;
+            String cor;
+            int ano;
 
-                        // Método construtor (inicializa os atributos do objeto)
-                        Carro(String modelo, String cor, int ano) {
-                        this.modelo = modelo;
-                        this.cor = cor;
-                        this.ano = ano;
-                        } 
+        // Método construtor (inicializa os atributos do objeto)
+            Carro(String modelo, String cor, int ano) {
+                this.modelo = modelo;
+                this.cor = cor;
+                this.ano = ano;
+            } 
 
-                        // Método para acelerar o carro
-                        void acelerar() {
-                        System.out.println("O carro " + modelo + " está acelerando!");
-                        } 
+        // Método para acelerar o carro
+            void acelerar() {
+            System.out.println("O carro " + modelo + " está acelerando!");
+            } 
                         
-                        // Método para obter a cor do carro
-                        String obterCor() {
-                        return cor;
-                            }
-                        }
+        // Método para obter a cor do carro
+               String obterCor() {
+                return cor;
+            }
+        }
 
-                        public class ExemploAtributosMetodos {
+        public class ExemploAtributosMetodos {
 
-                        public static void main(String[] args) {
+        public static void main(String[] args) {
 
-                        Carro meuCarro = new Carro("Sedan", "Prata", 2022);
+        Carro meuCarro = new Carro("Sedan", "Prata", 2022);
 
-                        meuCarro.acelerar();
+         meuCarro.acelerar();    // Saída: O carro Sedan está acelerando!
                         
-                        // Saída: O carro Sedan está acelerando!
-                        
-                        System.out.println("Cor do carro: " + meuCarro.obterCor());
+        System.out.println("Cor do carro: " + meuCarro.obterCor());  // Saída: Cor do carro: Prata
 
-                        // Saída: Cor do carro: Prata
-
-                            }
-                        }
+            }
+        }
                     </code>
                 </pre>
                 <h2>Exercicios:</h2>
