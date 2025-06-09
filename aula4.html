@@ -46,70 +46,69 @@
                 <h2>Exemplo de Código:</h2>
                 <pre>
                     <code>
-                        class ContaBancaria {
+class ContaBancaria {
 
-                        private int numeroConta;
-                        private String titular;
-                        private double saldo;
+    private int numeroConta;
+    private String titular;
+    private double saldo;
                         
-                        // Construtor
-                        public ContaBancaria(int numeroConta, String titular, double saldo) {
-                        this.numeroConta = numeroConta;
-                        this.titular = titular;
-                        this.saldo = saldo;
-                        } 
+// Construtor
+    public ContaBancaria(int numeroConta, String titular, double saldo) {
+    this.numeroConta = numeroConta;
+    this.titular = titular;
+    this.saldo = saldo;
+    } 
                         
-                        // Getters
-                        public int getNumeroConta() {
-                        return numeroConta;
-                        } 
-                        public String getTitular() {
-                        return titular;
-                        }
-                         public double getSaldo() {
-                        return saldo;
-                        }
+// Getters
+    public int getNumeroConta() {
+        return numeroConta;
+    } 
+    public String getTitular() {
+        return titular;
+    }
+    public double getSaldo() {
+        return saldo;
+    }
 
-                        // Setter (com validação)
-                        public void setSaldo(double novoSaldo) {
-                        if (novoSaldo >= 0) {
-                        saldo = novoSaldo;
-                        } else {
-                        System.out.println("Saldo inválido.");
-                            }
-                        }
+// Setter (com validação)
+    public void setSaldo(double novoSaldo) {
+        if (novoSaldo >= 0) {
+        saldo = novoSaldo;
+        } else {
+        System.out.println("Saldo inválido.");
+            }
+    }
                         
-                        public void depositar(double valor) {
-                        saldo += valor;
+    public void depositar(double valor) {
+        saldo += valor;
+        System.out.println("Depósito de " + valor + " realizado. Novo saldo: " + saldo);
+    }
 
-                        System.out.println("Depósito de " + valor + " realizado. Novo saldo: " + saldo);
-                        }
-
-                        public void sacar(double valor) {
-                        if (valor <= saldo) {
-                             saldo -=valor;
-                             System.out.println("Saque de " + valor + " realizado. Novo saldo: " + saldo);
-                        } else {
-                        System.out.println(" Saldo insuficiente.");
-                             } 
-                        } 
-                    }
+     public void sacar(double valor) {
+        if (valor <= saldo) {
+        saldo -=valor;
+        System.out.println("Saque de " + valor + " realizado. Novo saldo: " + saldo);
+        } else {
+        System.out.println(" Saldo insuficiente.");
+            } 
+        } 
+    }
                     
-                    public class ExemploEncapsulamento { 
+    public class ExemploEncapsulamento { 
                         
-                        public static void main(String[] args) {
+        public static void main(String[] args) {
                             
-                            ContaBancaria conta=new ContaBancaria(111222, "Carlos Drummond" , 2000.0);
+        ContaBancaria conta=new ContaBancaria(111222, "Carlos Drummond" , 2000.0);
 
-                            System.out.println("Titular: " + conta.getTitular()); // Saída: Titular: Carlos Drummond
+        System.out.println("Titular: " + conta.getTitular()); // Saída: Titular: Carlos Drummond
 
-                        conta.setSaldo(-100.0); // Saída: Saldo inválido.
+        conta.setSaldo(-100.0); // Saída: Saldo inválido.
 
-                        conta.setSaldo(2500.0);
+        conta.setSaldo(2500.0);
 
                         System.out.println(" Saldo: " + conta.getSaldo()); // Saída: Saldo: 2500.0
-                        }
-                    }
+                }
+        }
                     </code>
                 </pre>
                 <h2>Exercicios: </h2>
