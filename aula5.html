@@ -13,7 +13,7 @@
         <header>
         <nav>
             <img class="logo" src="assets/logo2.png" alt="" height="80px">
-            <a class="titulo" href="/">POO Descomplicada</a>
+            <a class="titulo" href="/projeto_certificadora">POO Descomplicada</a>
             <a onclick="window.close()">Fechar</a>
         </nav>
     </header>
@@ -42,67 +42,70 @@
                 <h2>Exemplos de código:</h2>
                 <pre>
                     <code>
-                        // Superclasse Animal
-                        class Animal {
+// Superclasse Animal
+    class Animal {
 
-                        String nome;
+        String nome;
 
-                        public Animal(String nome) {
-                        this.nome = nome;
-                        }
+        public Animal(String nome) {
+            this.nome = nome;
+        }
                 
-                        void fazerBarulho() {
-                        System.out.println("Animal faz um barulho genérico.");
-                            }
-                        }
+        void fazerBarulho() {
+            System.out.println("Animal faz um barulho genérico.");
+        }
+    }
 
-                        // Subclasse Cachorro
-                        class Cachorro extends Animal {
-                        String raca;
-                        public Cachorro(String nome, String raca) {
-                        super(nome); // Chama o construtor da superclasse
-                        this.raca = raca;
-                        }
+    // Subclasse Cachorro
+        class Cachorro extends Animal {
+            String raca;
                         
-                        // Sobrescrita do método fazerBarulho()
-                        @Override
-                        void fazerBarulho() {
-                        System.out.println("Cachorro late: Au au!");
-                        }
-
-                        void abanarRabo() {
-                            System.out.println("Cachorro abana o rabo.");
-                         }
-                        } 
-
-                        // Subclasse Gato
-                        class Gato extends Animal {
-                        public Gato(String nome) {
-                        super(nome);
-                        } 
-                        @Override
-                        void fazerBarulho() {
-                        System.out.println("Gato mia: Miau!");
-                            }
-                        } 
-
-                        public class ExemploHeranca {
-
-                        public static void main(String[] args) {
-
-                        Cachorro rex = new Cachorro("Rex", "Pastor Alemão");
-                        Gato felix = new Gato("Felix");
-
-                        rex.fazerBarulho(); // Saída: Cachorro late: Au au! (método sobrescrito)
-
-                        felix.fazerBarulho(); // Saída: Gato mia: Miau! (método sobrescrito)
-
-                        rex.abanarRabo();
-
-                        System.out.println("Nome do cachorro: " + rex.nome); // Acesso ao atributo da superclasse
+            public Cachorro(String nome, String raca) {
+            super(nome); // Chama o construtor da superclasse
+            this.raca = raca;
+            }
                         
-                            }
-                        }
+        // Sobrescrita do método fazerBarulho()
+            @Override
+            void fazerBarulho() {
+            System.out.println("Cachorro late: Au au!");
+             }
+
+            void abanarRabo() {
+                System.out.println("Cachorro abana o rabo.");
+            }
+        } 
+
+        // Subclasse Gato
+        class Gato extends Animal {
+                        
+            public Gato(String nome) {
+            super(nome);
+            }
+                        
+            @Override
+            void fazerBarulho() {
+            System.out.println("Gato mia: Miau!");
+                }
+            } 
+
+            public class ExemploHeranca {
+
+            public static void main(String[] args) {
+
+            Cachorro rex = new Cachorro("Rex", "Pastor Alemão");
+            Gato felix = new Gato("Felix");
+
+            rex.fazerBarulho(); // Saída: Cachorro late: Au au! (método sobrescrito)
+
+            felix.fazerBarulho(); // Saída: Gato mia: Miau! (método sobrescrito)
+
+            rex.abanarRabo();
+
+            System.out.println("Nome do cachorro: " + rex.nome); // Acesso ao atributo da superclasse
+                        
+            }
+        }
                     </code>
                 </pre>    
                 <h2>Exercícios:</h2>  
