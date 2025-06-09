@@ -1,0 +1,8 @@
+#Projeto Certificadora de Competência Comum
+
+## Este site foi desenvido por alunos do quarto período do curso de Análise e Desenvolvimento de Sistemas, no âmbito 
+## da disciplina Certificadora de Competência Comum, com o objetivo de aplicar os conhecimentos adquiridos durante os três primeiros
+## períodos do curso.
+## A proposta do site é tornar a agregar conteúdos para ensino da Programação Orientada a Objetos (POO), 
+## de forma acessível, claro e consiso. Aqui, você encontrará conteúdos organizados, com uma abordagem direta,
+## exemplos reais e explicações simples para quem está começando ou quer revisar os principais conceitos da POO.
