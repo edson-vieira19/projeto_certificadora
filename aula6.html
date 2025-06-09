@@ -13,7 +13,7 @@
         <header>
         <nav>
             <img class="logo" src="assets/logo2.png" alt="" height="80px">
-            <a class="titulo" href="/">POO Descomplicada</a>
+            <a class="titulo" href="/projeto_certificadora">POO Descomplicada</a>
             <a onclick="window.close()">Fechar</a>
         </nav>
     </header>
@@ -31,31 +31,31 @@
                 <h2>Exemplos de Código</h2>
                 <pre>
                     <code>
-                        // (Classes Animal, Cachorro e Gato definidas no exemplo de Herança)
-                        public class ExemploPolimorfismo {
-                        public static void main(String[] args) {
+// (Classes Animal, Cachorro e Gato definidas no exemplo de Herança)
+    public class ExemploPolimorfismo {
+                        
+        public static void main(String[] args) {
 
-                        Animal animal1 = new Cachorro("Rex", "Pastor Alemão"); // Polimorfismo: Referência de superclasse
+        Animal animal1 = new Cachorro("Rex", "Pastor Alemão"); // Polimorfismo: Referência de superclasse
 
-                        Animal animal2 = new Gato("Felix"); // Polimorfismo: Referência de superclasse
+        Animal animal2 = new Gato("Felix"); // Polimorfismo: Referência de superclasse
 
-                        animal1.fazerBarulho(); // Saída: Cachorro late: Au au! (Comportamento de Cachorro)
+        animal1.fazerBarulho(); // Saída: Cachorro late: Au au! (Comportamento de Cachorro)
 
-                        animal2.fazerBarulho(); // Saída: Gato mia: Miau! (Comportamento de Gato)
+        animal2.fazerBarulho(); // Saída: Gato mia: Miau! (Comportamento de Gato)
 
-                        // Array de animais (polimorfismo em ação)
+// Array de animais (polimorfismo em ação)
 
-                        Animal[] animais = new Animal[2];
+        Animal[] animais = new Animal[2];
 
-                        animais[0] = rex;
-                        animais[1] = felix;
+        animais[0] = rex;
+        animais[1] = felix;
 
-                        for (Animal animal : animais) {
-                        animal.fazerBarulho(); // Chamada polimórfica: cada animal faz seu próprio
-                        barulho
-                                }
-                            }
-                        }
+        for (Animal animal : animais) {
+        animal.fazerBarulho(); // Chamada polimórfica: cada animal faz seu próprio barulho
+            }
+        }
+    }
                     </code>
                 </pre>
                 <h2>Exercícios:</h2>
