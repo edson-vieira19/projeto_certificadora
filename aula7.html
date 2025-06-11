@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstração</title>
+    <script>
+  if (document.referrer === "" || !document.referrer.includes(location.hostname)) {
+    window.location.href = "/projeto_certificadora";
+  }
+</script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/sobre.css" />
+    <link rel="stylesheet" href="./css/aula.css">
+</head>
+<body>
+    <header>
+        <header>
+        <nav>
+            <img class="logo" src="assets/logo2.png" alt="" height="80px">
+            <a class="titulo" href="/projeto_certificadora">POO Descomplicada</a>
+            <a onclick="window.close()">Fechar</a>
+        </nav>
+    </header>
+    <main class="aulas-section">
+        <div class="container">
+            <h1>Abstração</h1>
+            <section class="texto-aula">
+                <p><strong>Abstração</strong> é o processo de simplificar a complexidade, modelando as classes de acordo com os
+                aspectos relevantes do problema, ignorando detalhes desnecessários. Ela permite que nos
+                concentremos no que é essencial.
+                Em Java, a abstração é alcançada através de classes abstratas e interfaces.</p>
+                <p><strong>Classes Abstratas:</strong> São classes que não podem ser instanciadas diretamente (não podemos criar objetos
+                    delas).
+                    Podem conter métodos abstratos (métodos sem implementação) e métodos concretos
+                    (com implementação).
+                    Métodos abstratos são declarados com a palavra-chave abstract e devem ser
+                    implementados pelas subclasses.
+                    Classes abstratas servem como modelos para subclasses, definindo um contrato comum.</p>
+                <p><strong>Interfaces: </strong> São como 'contratos' que definem um conjunto de métodos que uma classe deve
+                        implementar. São declaradas com a palavra-chave interface. Todos os métodos em uma interface são implicitamente public e abstract (até Java 8)
+                        Uma classe pode implementar múltiplas interfaces.
+                </p>
+                <h2>Exemplos de Código</h2>
+                <pre>
+                    <code>
+    // Classe Abstrata
+    abstract class InstrumentoMusical {
+
+        String nome;
+
+        public InstrumentoMusical(String nome) {
+        this.nome = nome;
+        }
+        
+    abstract void tocar(); // Método abstrato
+        void afinar() {
+
+        System.out.println("Afinando o instrumento."); // Método concreto
+         }
+        }
+
+// Subclasse concreta
+class Violino extends InstrumentoMusical {
+
+    public Violino(String nome) {
+    super(nome);
+    }
+
+    @Override
+    void tocar() {
+    System.out.println("Violino tocando uma melodia.");
+        }
+    }
+
+// Interface
+interface Barulhento {
+
+    void fazerBarulhoAlto();
+
+}
+
+// Classe que implementa a interface
+class Bateria implements Barulhento {
+
+    @Override
+    public void fazerBarulhoAlto() {
+
+    System.out.println("Bateria fazendo um som ensurdecedor!");
+    }
+}
+
+public class ExemploAbstracao {
+
+    public static void main(String[] args) {
+
+    InstrumentoMusical meuViolino = new Violino("Stradivarius");
+
+    meuViolino.tocar();
+
+    meuViolino.afinar();
+
+    Bateria minhaBateria = new Bateria();
+
+    minhaBateria.fazerBarulhoAlto();
+
+        }
+    }
+
+
+                    </code>
+                </pre>
+                <h2>Exercícios:</h2>
+                <ol>
+                    <li>
+                        Modele um sistema de pagamento usando uma interface Pagavel com um método
+                        calcularPagamento(). Crie classes para diferentes tipos de pagamento (ex: Funcionario,
+                        Boleto, Servico) que implementam essa interface.
+                        
+                    </li>
+                    <br>
+                    <li>
+                        Crie uma classe abstrata Veiculo com métodos para ligar(), desligar() e um método
+                        abstrato acelerar(). Crie subclasses Carro e Moto que herdam de Veiculo e
+                        implementam o método acelerar() de forma específica.
+                    </li>
+                    </ol>
+            </section>
+            <section class="video-aula">
+                <h2>Video da Aula</h2>
+                <iframe src="https://www.youtube.com/embed/sX4yCeGtElI" title="Aula de Abstração" frameborder="0" allowfullscreen></iframe>
+            </section>
+        </div>
+    </main>
+    </header>
+    <footer>
+        <p>Copyright © 2025 Todos os direitos reservados.</p>
+    </footer>
+    
+</body>
+</html>
